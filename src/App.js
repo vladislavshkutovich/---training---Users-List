@@ -4,10 +4,7 @@ import UsersList from './Users/UsersList';
 
 function App() {
 	const [usersList, setUsersList] = useState([]);
-	// usersList = [
-	// 	{ username: 'Vlad', age: 26 },
-	// 	{ username: 'Nastassia', age: 24 },
-	// ];
+
 	const addUserHandler = (uName, uAge) => {
 		setUsersList(() => [
 			...usersList,
@@ -16,10 +13,10 @@ function App() {
 	};
 
 	return (
-		<div>
+		<React.Fragment>
 			<AddUser onAddUser={addUserHandler} />
 			<UsersList users={usersList} />
-		</div>
+		</React.Fragment>
 	);
 }
 
